@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Font Link Added -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awasome CDN Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Link CSS file -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="w-screen h-screen flex justify-center items-center bg-amber-50">
+      <div class="px-1 pt-5 pb-10 border-2 rounded-2xl bg-indigo-50 flex flex-col justify-center items-center">
+        <span class=""><i class="fa-solid fa-gamepad text-5xl text-amber-500"></i></span>
+        <input class="mb-2 px-1 py-14 text-right text-3xl font-bold focus:outline-none" type="text" name="display">
+        <table class="">
+            <tr class="">
+                <td class="pr-3 pb-3"><button class="bg-violet-500 font-bold px-5 py-3 rounded-full text-3xl">C</button></td>
+                <td class="pr-3 pb-3"><button class="bg-gray-200 font-bold px-5 py-3 rounded-full text-3xl">%</button></td>
+                <td class="pr-3 pb-3"><button class="bg-gray-200 font-bold p-3 rounded-full text-3xl"><i class="fa-solid fa-delete-left"></i></button></td>
+                <td class="pb-3"><button class="bg-gray-200 font-bold p-3 rounded-full text-3xl"><i class="fa-solid fa-divide"></i></button></td>
+            </tr>
+             <tr class="">
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">7</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">8</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">9</button></td>
+                <td class="pb-3"><button class="bg-gray-200 font-bold p-3 rounded-full text-3xl"><i class="fa-solid fa-xmark"></i></button></td>
+            </tr>
+            <tr>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">4</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">5</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">6</button></td>
+                <td class="pb-3"><button class="bg-gray-200 font-bold p-3 rounded-full text-3xl"><i class="fa-solid fa-minus"></i></button></td>
+            </tr>
+             <tr>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">1</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">2</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">3</button></td>
+                <td class="pb-3"><button class="bg-gray-200 font-bold p-3 rounded-full text-3xl"><i class="fa-solid fa-plus"></i></button></td>
+            </tr>
+             <tr>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold p-3 rounded-full text-3xl">00</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-3 rounded-full text-3xl">0</button></td>
+                <td class="pr-3 pb-3"><button class="bg-white font-bold px-6 py-3 rounded-full text-3xl">.</button></td>
+                <td class="pb-3"><button class="bg-lime-500 text-white font-bold p-3 rounded-full text-3xl"><i class="fa-solid fa-equals"></i></button></td>
+            </tr>
+
+        </table>
+        </div>
+    </div>
+  </body>
+</html>
