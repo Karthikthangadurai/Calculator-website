@@ -17,50 +17,52 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Link CSS file -->
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <!-- Calculator Project -->
 
     <div class="w-screen h-screen flex justify-center items-center bg-gradient-to-r from-purple-300 via-pink-300 to-red-300">
       <div class="px-2 sm:px-1 pt-2 pb-4 sm:pt-5 sm:pb-11 border-2 rounded-2xl bg-indigo-100 flex flex-col justify-center items-center">
-        <span class=""><i class="fa-regular fa-circle text-xs sm:text-base"></i></span>
-        <input class="mb-2 py-10 sm:px-1 sm:py-14 text-right text-lg sm:text-3xl font-bold focus:outline-none" type="text" name="display">
+        <span class=""><i class="fa-regular fa-circle text-xs sm:text-base text-violet-900"></i></span>
+        <input id="inputdata" class="mb-2 py-10 sm:px-1 sm:py-14 text-violet-900 text-right text-lg sm:text-3xl font-bold focus:outline-none" type="text" value="" name="display">
         <table class="">
             <tr class="">
-                <td class="pr-3 pb-3"><button class="bg-violet-500 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">C</button></td>
-                <td class="pr-3 pb-3"><button class="bg-slate-300 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">%</button></td>
-                <td class="pr-3 pb-3"><button class="bg-slate-300 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-delete-left"></i></button></td>
-                <td class="pb-3"><button class="bg-slate-300 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-divide"></i></button></td>
+                <td class="pr-3 pb-3"><button id="btnclear" class="bg-violet-800 text-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">C</button></td>
+                <td class="pr-3 pb-3"><button id="btnpct" class="bg-slate-300 text-red-500 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">%</button></td>
+                <td class="pr-3 pb-3"><button id="btndel" class="bg-slate-300 text-red-500 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-delete-left"></i></button></td>
+                <td class="pb-3"><button id="btndivid" class="bg-slate-300 text-red-500 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-divide"></i></button></td>
             </tr>
              <tr class="">
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">7</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">8</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">9</button></td>
-                <td class="pb-3"><button class="bg-slate-300 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-xmark"></i></button></td>
+                <td class="pr-3 pb-3"><button id="btnseven" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">7</button></td>
+                <td class="pr-3 pb-3"><button id="btneight" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">8</button></td>
+                <td class="pr-3 pb-3"><button id="btnnine" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">9</button></td>
+                <td class="pb-3"><button id="btnmulti" class="bg-slate-300 text-red-500 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-xmark"></i></button></td>
             </tr>
             <tr>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">4</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">5</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">6</button></td>
-                <td class="pb-3"><button class="bg-slate-300 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-minus"></i></button></td>
+                <td class="pr-3 pb-3"><button id="btnfour" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">4</button></td>
+                <td class="pr-3 pb-3"><button id="btnfive" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">5</button></td>
+                <td class="pr-3 pb-3"><button id="btnsix" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">6</button></td>
+                <td class="pb-3"><button id="btnminus" class="bg-slate-300 text-red-500 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-minus"></i></button></td>
             </tr>
              <tr>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">1</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">2</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">3</button></td>
-                <td class="pb-3"><button class="bg-slate-300 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-plus"></i></button></td>
+                <td class="pr-3 pb-3"><button id="btnone" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">1</button></td>
+                <td class="pr-3 pb-3"><button id="btntwo" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">2</button></td>
+                <td class="pr-3 pb-3"><button id="btnthree" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">3</button></td>
+                <td class="pb-3"><button id="btnplus" class="bg-slate-300 text-red-500 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-plus"></i></button></td>
             </tr>
              <tr>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl">00</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">0</button></td>
-                <td class="pr-3 pb-3"><button class="bg-white font-bold px-5 py-2 sm:px-6 sm:py-3 rounded-full text-lg sm:text-3xl">.</button></td>
-                <td class="pb-3"><button class="bg-lime-500 text-white font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-equals"></i></button></td>
+                <td class="pr-3 pb-3"><button id="btndzero" class="bg-white text-orange-600 font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl">00</button></td>
+                <td class="pr-3 pb-3"><button id="btnzero" class="bg-white text-blue-800 font-bold px-4 py-2 sm:px-5 sm:py-3 rounded-full text-lg sm:text-3xl">0</button></td>
+                <td class="pr-3 pb-3"><button id="btndot" class="bg-white text-orange-600 font-bold px-5 py-2 sm:px-6 sm:py-3 rounded-full text-lg sm:text-3xl">.</button></td>
+                <td class="pb-3"><button id="btnequal" class="bg-lime-500 text-white font-bold px-3 py-2 sm:p-3 rounded-full text-lg sm:text-3xl"><i class="fa-solid fa-equals"></i></button></td>
             </tr>
 
         </table>
         </div>
     </div>
 
+    <!-- Add Javascript File -->
+     <script src="./script.js"></script>
   </body>
 </html>
